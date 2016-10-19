@@ -6,23 +6,23 @@ stagingpswd=""
 staginguser=""
 
 #EDIT YOUR PRODUCTION CREDENTIALS HERE
-develophost=""
-developpswd=""
-developuser=""
+productionhost=""
+productionpswd=""
+productionuser=""
 
 #DONT TOUCH THIS
 echo "Do you want to init the project? [yes or no]"
 read init
 
-echo "Where to deploy? [staging or dev]"
+echo "Where to deploy? [staging or production]"
 read environment
 
 if [ "$init" == "yes" ]; then
 	if [ "$environment" == "staging" ]; then
 		git ftp init -u "$staginguser" -P "$staginghost"
 	fi
-	if [ "$environment" == "dev" ]; then
-		git ftp init -u "$developuser" -P "$develophost"
+	if [ "$environment" == "production" ]; then
+		git ftp init -u "$productionuser" -P "$productionhost"
 	fi
 fi
 
@@ -30,8 +30,8 @@ if [ "$init" == "no" ]; then
 	if [ "$environment" == "staging" ]; then
 		git ftp push --user "$staginguser" --passwd "$stagingpswd" "$staginghost"
 	fi
-	if [ "$environment" == "dev" ]; then
-		git ftp push --user "$developuser" --passwd "$developpswd" "$develophost"
+	if [ "$environment" == "production" ]; then
+		git ftp push --user "$productionuser" --passwd "$productionpswd" "$productionhost"
 	fi
 fi
 

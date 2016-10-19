@@ -13,6 +13,6 @@ This is an extra script for [git-ftp](https://github.com/git-ftp/git-ftp). You c
 6. Be sure if your git repo is up to date.
 7. Run the script `./deploy`
 8. Some questions will be asked
-8.1 Do you want to init the project? [yes or no] Type `yes` if this project isn't online yet or typ `no` if you want to update your current project
-8.2 Where to deploy? [staging or production]
-9 Your project is being deployed.
+8.1. Do you want to init the project? [yes or no] Type `yes` if this project isn't online yet or typ `no` if you want to update your current project
+8.2. Where to deploy? [staging or production]
+9. Your project is being deployed.
